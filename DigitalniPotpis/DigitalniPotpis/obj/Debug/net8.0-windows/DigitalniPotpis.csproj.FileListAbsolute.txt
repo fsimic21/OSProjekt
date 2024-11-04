@@ -1,0 +1,16 @@
+C:\Users\FOI\Documents\OS\Projekt\OSProjekt\DigitalniPotpis\DigitalniPotpis\bin\Debug\net8.0-windows\DigitalniPotpis.exe
+C:\Users\FOI\Documents\OS\Projekt\OSProjekt\DigitalniPotpis\DigitalniPotpis\bin\Debug\net8.0-windows\DigitalniPotpis.deps.json
+C:\Users\FOI\Documents\OS\Projekt\OSProjekt\DigitalniPotpis\DigitalniPotpis\bin\Debug\net8.0-windows\DigitalniPotpis.runtimeconfig.json
+C:\Users\FOI\Documents\OS\Projekt\OSProjekt\DigitalniPotpis\DigitalniPotpis\bin\Debug\net8.0-windows\DigitalniPotpis.dll
+C:\Users\FOI\Documents\OS\Projekt\OSProjekt\DigitalniPotpis\DigitalniPotpis\bin\Debug\net8.0-windows\DigitalniPotpis.pdb
+C:\Users\FOI\Documents\OS\Projekt\OSProjekt\DigitalniPotpis\DigitalniPotpis\obj\Debug\net8.0-windows\DigitalniPotpis.csproj.GenerateResource.cache
+C:\Users\FOI\Documents\OS\Projekt\OSProjekt\DigitalniPotpis\DigitalniPotpis\obj\Debug\net8.0-windows\DigitalniPotpis.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\FOI\Documents\OS\Projekt\OSProjekt\DigitalniPotpis\DigitalniPotpis\obj\Debug\net8.0-windows\DigitalniPotpis.AssemblyInfoInputs.cache
+C:\Users\FOI\Documents\OS\Projekt\OSProjekt\DigitalniPotpis\DigitalniPotpis\obj\Debug\net8.0-windows\DigitalniPotpis.AssemblyInfo.cs
+C:\Users\FOI\Documents\OS\Projekt\OSProjekt\DigitalniPotpis\DigitalniPotpis\obj\Debug\net8.0-windows\DigitalniPotpis.csproj.CoreCompileInputs.cache
+C:\Users\FOI\Documents\OS\Projekt\OSProjekt\DigitalniPotpis\DigitalniPotpis\obj\Debug\net8.0-windows\DigitalniPotpis.dll
+C:\Users\FOI\Documents\OS\Projekt\OSProjekt\DigitalniPotpis\DigitalniPotpis\obj\Debug\net8.0-windows\refint\DigitalniPotpis.dll
+C:\Users\FOI\Documents\OS\Projekt\OSProjekt\DigitalniPotpis\DigitalniPotpis\obj\Debug\net8.0-windows\DigitalniPotpis.pdb
+C:\Users\FOI\Documents\OS\Projekt\OSProjekt\DigitalniPotpis\DigitalniPotpis\obj\Debug\net8.0-windows\DigitalniPotpis.genruntimeconfig.cache
+C:\Users\FOI\Documents\OS\Projekt\OSProjekt\DigitalniPotpis\DigitalniPotpis\obj\Debug\net8.0-windows\ref\DigitalniPotpis.dll
+C:\Users\FOI\Documents\OS\Projekt\OSProjekt\DigitalniPotpis\DigitalniPotpis\obj\Debug\net8.0-windows\DigitalniPotpis.frmDigitalniPotpis.resources
