@@ -14,3 +14,4 @@ C:\Users\FOI\Documents\OS\Projekt\OSProjekt\DigitalniPotpis\DigitalniPotpis\obj\
 C:\Users\FOI\Documents\OS\Projekt\OSProjekt\DigitalniPotpis\DigitalniPotpis\obj\Debug\net8.0-windows\DigitalniPotpis.genruntimeconfig.cache
 C:\Users\FOI\Documents\OS\Projekt\OSProjekt\DigitalniPotpis\DigitalniPotpis\obj\Debug\net8.0-windows\ref\DigitalniPotpis.dll
 C:\Users\FOI\Documents\OS\Projekt\OSProjekt\DigitalniPotpis\DigitalniPotpis\obj\Debug\net8.0-windows\DigitalniPotpis.frmDigitalniPotpis.resources
+C:\Users\FOI\Documents\OS\Projekt\OSProjekt\DigitalniPotpis\DigitalniPotpis\obj\Debug\net8.0-windows\DigitalniPotpis.sourcelink.json
