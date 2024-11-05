@@ -30,7 +30,6 @@ namespace DigitalniPotpis
         {
             rsaKeyPath = SelectFolder("Odaberite direktorij za spremanje kljuèeva");
             GenerateKey(RSAUtil.GenerateKey, "RSA", rsaKeyPath);
-            btnAsymetricCrypto.Enabled = originalFile != null;
             btnSign.Enabled = hashPath != null;
 
         }
@@ -130,13 +129,14 @@ namespace DigitalniPotpis
         {
             hashPath = SelectFolder("Odaberite direktorij za spremanje sažetka datoteke");
             txtHash.Text = SignatureUtil.HashFile(hashPath, originalFile);
-            btnSign.Enabled = rsaKeyPath != null;
+            btnSign.Enabled = true;
 
         }
 
         private void btnSign_Click(object sender, EventArgs e)
         {
-            SignatureUtil.SignFile(hashPath, rsaKeyPath);
+            SignatureUtil.GenerateKey(hashPath);
+            SignatureUtil.SignFile(hashPath);
             MessageBox.Show("Potpisana datoteka", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             btnCheckSignature.Enabled = true;
         }
@@ -144,7 +144,7 @@ namespace DigitalniPotpis
         private void btnCheckSignature_Click(object sender, EventArgs e)
         {
             txtSignature.Text = SignatureUtil.LoadSignatureString(hashPath);
-            bool valid = SignatureUtil.VerifySignature(hashPath, SignatureUtil.LoadSignature(hashPath), rsaKeyPath);
+            bool valid = SignatureUtil.VerifySignature(hashPath, SignatureUtil.LoadSignature(hashPath));
             if (valid) MessageBox.Show("Potpis je valjan", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else MessageBox.Show("Potpis nije valjan", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             txtSignedFile.Text = originalFile;

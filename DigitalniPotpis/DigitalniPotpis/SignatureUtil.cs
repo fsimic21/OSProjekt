@@ -21,17 +21,44 @@ namespace DigitalniPotpis
             }
         }
 
+        public static void GenerateKey(string folderPath)
+        {
+            using (RSA rsa = RSA.Create(2048))
+            {
+                var privateKey = rsa.ExportRSAPrivateKey();
+                var publicKey = rsa.ExportRSAPublicKey();
+
+                File.WriteAllText(Path.Combine(folderPath, "potpis_privatni_kljuc.txt"), Convert.ToBase64String(privateKey));
+                File.WriteAllText(Path.Combine(folderPath, "potpis_javni_kljuc.txt"), Convert.ToBase64String(publicKey));
+            }
+        }
+
+        public static RSA LoadPrivateKey(string folderPath)
+        {
+            var privateKeyBytes = Convert.FromBase64String(File.ReadAllText(Path.Combine(folderPath, "potpis_privatni_kljuc.txt")));
+            RSA rsa = RSA.Create();
+            rsa.ImportRSAPrivateKey(privateKeyBytes, out _);
+            return rsa;
+        }
+        public static RSA LoadPublicKey(string folderPath)
+        {
+            var publicKeyBytes = Convert.FromBase64String(File.ReadAllText(Path.Combine(folderPath, "potpis_javni_kljuc.txt")));
+            RSA rsa = RSA.Create();
+            rsa.ImportRSAPublicKey(publicKeyBytes, out _);
+            return rsa;
+        }
+
         public static byte[] LoadHashFile(string folderPath)
         {
             string hashBase64 = File.ReadAllText(Path.Combine(folderPath, "sazetakDatoteke.txt"));
             return Convert.FromBase64String(hashBase64);
         }
 
-        public static void SignFile(string hashPath, string privateKeyPath)
+        public static void SignFile(string hashPath)
         {
             byte[] fileHash = LoadHashFile(hashPath);
 
-            using (RSA rsa = RSAUtil.LoadPrivateKey(privateKeyPath))
+            using (RSA rsa = LoadPrivateKey(hashPath))
             {
                 byte[] signature = rsa.SignHash(fileHash, HashAlgorithmName.SHA256, RSASignaturePadding.Pkcs1);
                 File.WriteAllText(Path.Combine(hashPath, "potpisanaDatoteka.txt"), Convert.ToBase64String(signature));
@@ -39,11 +66,11 @@ namespace DigitalniPotpis
         }
 
 
-        public static bool VerifySignature(string filePath, byte[] signature, string publicKeyPath)
+        public static bool VerifySignature(string filePath, byte[] signature)
         {
             byte[] fileHash = LoadHashFile(filePath);
 
-            using (RSA rsa = RSAUtil.LoadPublicKey(publicKeyPath))
+            using (RSA rsa = LoadPublicKey(filePath))
             {
                 return rsa.VerifyHash(fileHash, signature, HashAlgorithmName.SHA256, RSASignaturePadding.Pkcs1);
             }
